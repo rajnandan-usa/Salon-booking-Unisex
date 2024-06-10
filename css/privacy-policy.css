@@ -1,0 +1,70 @@
+/* General reset and mobile-first approach */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.back-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+}
+
+.privacy-policy-container {
+    flex: 1;
+    padding: 80px 15px 60px; /* Padding to account for fixed header and footer */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.privacy-policy-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.privacy-policy-card h2 {
+    margin-top: 0;
+}
+
+.privacy-policy-card h3 {
+    margin-bottom: 10px;
+}
